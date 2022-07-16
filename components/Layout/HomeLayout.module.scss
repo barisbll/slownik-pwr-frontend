@@ -1,0 +1,29 @@
+@import "../../styles/mixins";
+
+.container {
+  // @include respond(big-desktop) {
+  // }
+  height: 100vh;
+  // width: 100vw;
+  padding: 0;
+}
+
+.leftContainer {
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  padding: 1rem 3rem;
+}
+
+.subContainer {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 3%;
+}
+
+.childrenContainer {
+  height: 100%;
+  width: 53.3%;
+  padding: 0rem 4rem;
+  margin-bottom: 25rem;
+}
