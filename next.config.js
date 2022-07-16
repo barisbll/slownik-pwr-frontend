@@ -6,8 +6,8 @@ module.exports = (phase, { defaultConfig }) => {
     return {
       reactStrictMode: true,
       env: {
-        host: "localhost",
-        port: "3000",
+        host: "localhost:8080",
+        hostFull: "http://localhost:8080",
       },
     };
   }
@@ -15,8 +15,8 @@ module.exports = (phase, { defaultConfig }) => {
   return {
     reactStrictMode: true,
     env: {
-      host: "https://slownik-pwr-backend.herokuapp.com/",
-      port: "80",
+      host: "slownik-pwr-backend.herokuapp.com",
+      hostFull: "https://slownik-pwr-backend.herokuapp.com",
     },
   };
 };

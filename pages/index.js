@@ -25,7 +25,7 @@ export default function Home({ content }) {
 
 export async function getStaticProps() {
   try {
-    const result = await axios.get(`http://localhost:8080/posts/home`);
+    const result = await axios.get(`${process.env.hostFull}/posts/home`);
 
     if (result.status !== 200) {
       throw new Error("Couldn't fetch the data");

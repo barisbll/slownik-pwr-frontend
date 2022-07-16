@@ -50,10 +50,13 @@ const Login = () => {
       try {
         reduxDispatch(feedbackActions.loading());
 
-        const response = await axios.post("http://localhost:8080/auth/login", {
-          email: formState.email,
-          password: formState.password,
-        });
+        const response = await axios.post(
+          `${process.env.hostFull}/auth/login`,
+          {
+            email: formState.email,
+            password: formState.password,
+          }
+        );
 
         reduxDispatch(feedbackActions.success("You successfully logged in!"));
 

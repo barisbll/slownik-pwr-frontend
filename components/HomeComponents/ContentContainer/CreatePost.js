@@ -27,7 +27,7 @@ const CreatePost = ({ setNewPost }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/posts/post",
+        `${process.env.hostFull}/posts/post`,
         { titleId: titleId, post: post },
         { headers: headers }
       );
