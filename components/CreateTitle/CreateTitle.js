@@ -20,7 +20,7 @@ const CreateTitle = () => {
     try {
       dispatch(feedbackActions.loading());
       const response = await axios.post(
-        "http://localhost:8080/posts/title",
+        `${process.env.hostFull}/posts/title`,
         {
           title: title,
           post: post,

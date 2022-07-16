@@ -10,7 +10,9 @@ const Sidebar = () => {
   useEffect(() => {
     const fetchTitles = async () => {
       try {
-        const result = await axios.get("http://localhost:8080/posts/titles/0");
+        const result = await axios.get(
+          `${process.env.hostFull}/posts/titles/0`
+        );
 
         if (result.status !== 200) {
           throw new Error("Error while fetching titles");

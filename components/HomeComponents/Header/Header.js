@@ -21,7 +21,7 @@ const Header = ({
   const dispatch = useDispatch();
 
   const fetchSearchResultHandler = useCallback(async (searched, filter) => {
-    const response = await fetch("http://localhost:8080/posts/" + filter, {
+    const response = await fetch(`${process.env.hostFull}/posts/` + filter, {
       method: "POST",
       body: JSON.stringify(searched),
       headers: {

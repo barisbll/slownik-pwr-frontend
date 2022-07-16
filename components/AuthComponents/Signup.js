@@ -81,12 +81,15 @@ const Signup = () => {
       try {
         reduxDispatch(feedbackActions.loading());
 
-        const response = await axios.post("http://localhost:8080/auth/signup", {
-          username: formState.username,
-          email: formState.email,
-          password: formState.password,
-          confirmPassword: formState.confirmPassword,
-        });
+        const response = await axios.post(
+          `${process.env.hostFull}/auth/signup`,
+          {
+            username: formState.username,
+            email: formState.email,
+            password: formState.password,
+            confirmPassword: formState.confirmPassword,
+          }
+        );
 
         reduxDispatch(feedbackActions.success("You successfully signed up!"));
 

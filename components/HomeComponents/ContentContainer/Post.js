@@ -55,7 +55,7 @@ const Post = ({ date, postContent, username, postId, totalPosts }) => {
         dispatch(feedbackActions.loading());
 
         const response = await axios.delete(
-          "http://localhost:8080/posts/post/" + postId,
+          `${process.env.hostFull}/posts/post/` + postId,
           {
             headers: {
               Authorization: "Bearer " + authState.token,
@@ -135,7 +135,7 @@ const Post = ({ date, postContent, username, postId, totalPosts }) => {
       }
 
       const response = await axios.put(
-        "http://localhost:8080/posts/post",
+        `${process.env.hostFull}/posts/post`,
         {
           postId: postId,
           postContent: updatePost,
