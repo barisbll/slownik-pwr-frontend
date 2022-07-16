@@ -69,7 +69,7 @@ const Header = ({
   if (searchFilter === "title-text-search") {
     searchResultContent = (
       <>
-        {searchItems.map((elem) => (
+        {searchItems?.map((elem) => (
           <li
             key={elem._id}
             onClick={() => {
